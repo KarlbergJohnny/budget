@@ -277,22 +277,40 @@ förlita sig på den förrän den är verifierad och patenten är kontrollerade.
 - **Lastväxelns läge:** jämför uppmätt last med lastväxelns läge. Kräver en givare på lastväxeln. Det är en stor säkerhetsvinst.
 - **Kräver fortfarande en människa:** bromsprov, handbroms, lastsäkring och farligt gods (från fraktsedeln).
 
-## Mappstruktur (förslag)
+## Mappstruktur
+
+Se `docs/kom-igang.md` för hur allt startas och testas.
 
 ```
 firmware/
-  common/        # protokoll (BLE-paket, ESP-NOW), kalibrering, fusion, JSON
-  corner/        # hörnenhet
-  gateway/       # gateway: BLE-skanning, LTE-M, GPS, beräkningar
-  test/          # enhetstester: fusion, kalibrering, snedlastning, nollställning
-server/          # mottagning (MQTT/HTTPS), lagring, beräkningar, abonnemang
-app/             # webbapp (Web Bluetooth): montering, visning, bekräftelse av tom vagn
+  lib/vagn_common/  # delat: BLE-paketformat, robust medelvärde, ultraljud, fusion
+  corner/           # hörnenhet (PlatformIO): mät, sänd BLE advertising, sov
+  gateway/          # gateway (PlatformIO): skanna BLE, skicka till servern via wifi
+  test_native/      # enhetstester för vagn_common som körs på datorn
+server/             # FastAPI + SQLite: mottagning, vikt, nollställning, API
+  tests/            # pytest
+app/                # webbapp (vanlig JS): vagnar, enheter, registrering, tom vagn
+tools/simulate.py   # simulerad gateway med fyra hörn, för test utan hårdvara
 docs/
-  beslut.md      # designbeslut med datum (även patentskäl)
-  strom.md
-  pilot.md
-hardware/        # kopplingsschema, BOM, lådor, målplåt, monteringsmall
+  kom-igang.md      # steg för steg
+  beslut.md         # designbeslut med datum (även patentskäl) – ej skriven än
+  strom.md          # ej skriven än
+  pilot.md          # ej skriven än
+hardware/           # kopplingsschema, BOM, lådor, målplåt, monteringsmall – ej påbörjad
 ```
+
+### Status (version 0.1)
+
+- [x] Radioprotokoll och mätfilter, med tester
+- [x] Hörnenhet: simulerade värden, stöd för VL53L4CD och HC-SR04 (oprövat mot givare)
+- [x] Gateway: BLE-skanning och uppladdning via wifi
+- [x] Server: mottagning, registrering, vikt, snedlastning, nollställning med rimlighetskontroll, historik, händelselogg
+- [x] Webbapp: vagnar, vagnvy, enheter, gateways
+- [ ] Kompilera och prova firmwaren på riktiga kort
+- [ ] LTE-M och GPS på LilyGO-kortet
+- [ ] Inloggning i appen och API:t
+- [ ] Batterimätning på Olimex-kortet (kontrollera stiftet)
+- [ ] Djupsömn med väckning via IMU
 
 ## Etapper
 

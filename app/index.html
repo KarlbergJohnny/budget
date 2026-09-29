@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070b11">
+  <meta name="description" content="Vagnvåg mäter vikt och snedlastning på godsvagnar med trådlösa givare som monteras med magneter. Se resultatet direkt i mobilen.">
+  <title>Vagnvåg – vikt på varje vagn</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22%3E%3Crect x=%221%22 y=%225%22 width=%2214%22 height=%225%22 rx=%221%22 fill=%22%2338bdf8%22/%3E%3Ccircle cx=%224%22 cy=%2212%22 r=%222%22 fill=%22%2338bdf8%22/%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%222%22 fill=%22%2338bdf8%22/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+  <div class="bg-glow" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <header class="nav" id="top">
+    <a href="#top" class="logo"><span class="logo-mark"></span>Vagnvåg</a>
+    <button class="menu-btn" aria-label="Meny" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+    <nav id="menu">
+      <a href="#hur">Så fungerar det</a>
+      <a href="#funktioner">Funktioner</a>
+      <a href="#appen">Appen</a>
+      <a href="#pilot">Pilot</a>
+      <a href="app.html" class="nav-cta">Öppna appen</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-text reveal">
+        <p class="eyebrow"><span class="pulse"></span>Pilot 2026</p>
+        <h1>Vikten på varje vagn.<br><span class="grad">Direkt i mobilen.</span></h1>
+        <p class="lead">Trådlösa givare som sätts fast med magneter på boggin. Mäter hur fjädringen trycks ihop, räknar ut vikt och snedlastning och larmar innan tåget går.</p>
+        <div class="cta-row">
+          <a href="app.html" class="btn primary">Öppna appen</a>
+          <a href="#hur" class="btn ghost">Så fungerar det</a>
+        </div>
+        <ul class="ticks">
+          <li>Inga kablar</li><li>Inga verktyg</li><li>Ingen spårvåg</li>
+        </ul>
+      </div>
+
+      <div class="scene-wrap reveal" aria-hidden="true">
+        <div class="scene" id="scene">
+          <div class="layer layer-wagon">
+            <svg viewBox="0 0 520 300" class="wagon">
+              <defs>
+                <linearGradient id="gBody" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0" stop-color="#1e293b"/><stop offset="1" stop-color="#0f172a"/>
+                </linearGradient>
+                <linearGradient id="gTop" x1="0" x2="1">
+                  <stop offset="0" stop-color="#334155"/><stop offset="1" stop-color="#1e293b"/>
+                </linearGradient>
+                <linearGradient id="gCont" x1="0" x2="1">
+                  <stop offset="0" stop-color="#0ea5e9"/><stop offset="1" stop-color="#6366f1"/>
+                </linearGradient>
+                <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="4" result="b"/>
+                  <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+              </defs>
+              <!-- räls -->
+              <path d="M10 262 L510 262" stroke="#334155" stroke-width="4"/>
+              <path d="M10 272 L510 272" stroke="#1e293b" stroke-width="3"/>
+              <!-- container -->
+              <g class="container">
+                <path d="M78 70 L432 70 L452 56 L98 56 Z" fill="url(#gTop)" opacity=".9"/>
+                <rect x="78" y="70" width="354" height="100" rx="4" fill="url(#gCont)" opacity=".92"/>
+                <path d="M432 70 L452 56 L452 156 L432 170 Z" fill="#4338ca" opacity=".9"/>
+                <g stroke="rgba(255,255,255,.18)" stroke-width="2">
+                  <path d="M110 76 V164"/><path d="M140 76 V164"/><path d="M170 76 V164"/><path d="M200 76 V164"/>
+                  <path d="M230 76 V164"/><path d="M260 76 V164"/><path d="M290 76 V164"/><path d="M320 76 V164"/>
+                  <path d="M350 76 V164"/><path d="M380 76 V164"/><path d="M410 76 V164"/>
+                </g>
+              </g>
+              <!-- vagnsram -->
+              <rect x="50" y="172" width="420" height="16" rx="3" fill="url(#gBody)" stroke="#475569"/>
+              <!-- boggier -->
+              <g class="bogie">
+                <rect x="70" y="190" width="120" height="34" rx="6" fill="#111827" stroke="#475569"/>
+                <circle cx="100" cy="240" r="22" fill="#0b1220" stroke="#64748b" stroke-width="3"/>
+                <circle cx="160" cy="240" r="22" fill="#0b1220" stroke="#64748b" stroke-width="3"/>
+                <path d="M92 196 q8 6 0 12 q-8 6 0 12" stroke="#94a3b8" stroke-width="3" fill="none"/>
+                <path d="M168 196 q8 6 0 12 q-8 6 0 12" stroke="#94a3b8" stroke-width="3" fill="none"/>
+              </g>
+              <g class="bogie">
+                <rect x="330" y="190" width="120" height="34" rx="6" fill="#111827" stroke="#475569"/>
+                <circle cx="360" cy="240" r="22" fill="#0b1220" stroke="#64748b" stroke-width="3"/>
+                <circle cx="420" cy="240" r="22" fill="#0b1220" stroke="#64748b" stroke-width="3"/>
+                <path d="M352 196 q8 6 0 12 q-8 6 0 12" stroke="#94a3b8" stroke-width="3" fill="none"/>
+                <path d="M428 196 q8 6 0 12 q-8 6 0 12" stroke="#94a3b8" stroke-width="3" fill="none"/>
+              </g>
+              <!-- givare -->
+              <g filter="url(#glow)" class="sensors">
+                <circle class="s s1" cx="100" cy="200" r="6"/>
+                <circle class="s s2" cx="160" cy="200" r="6"/>
+                <circle class="s s3" cx="360" cy="200" r="6"/>
+                <circle class="s s4" cx="420" cy="200" r="6"/>
+              </g>
+              <!-- radiovågor till gateway -->
+              <g class="waves" stroke="#38bdf8" fill="none" stroke-width="2">
+                <path d="M258 150 a16 16 0 0 1 16 0"/>
+                <path d="M252 142 a26 26 0 0 1 28 0"/>
+                <path d="M246 134 a36 36 0 0 1 40 0"/>
+              </g>
+              <rect x="252" y="152" width="28" height="16" rx="3" fill="#0b1220" stroke="#38bdf8" filter="url(#glow)"/>
+            </svg>
+          </div>
+
+          <div class="layer layer-card card-total">
+            <span class="k">Totalvikt</span>
+            <span class="v" id="demoTotal">76,2 t</span>
+            <span class="bar"><i id="demoBar"></i></span>
+          </div>
+          <div class="layer layer-card card-imb">
+            <span class="k">Snedlast</span>
+            <span class="v small-v">5,3 %</span>
+            <span class="ok-dot">Inom gräns</span>
+          </div>
+          <div class="layer layer-card card-gps">
+            <span class="k">Position</span>
+            <span class="v small-v">Hallsberg</span>
+            <span class="k">LTE-M · GPS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Så fungerar det -->
+    <section id="hur" class="section">
+      <div class="section-head reveal">
+        <p class="eyebrow">Så fungerar det</p>
+        <h2>Tre steg från vagn till mobil</h2>
+      </div>
+      <div class="steps">
+        <article class="step tilt reveal" data-tilt>
+          <div class="step-num">1</div>
+          <svg viewBox="0 0 64 64" class="icon" aria-hidden="true">
+            <rect x="12" y="18" width="40" height="24" rx="6" class="ic-stroke"/>
+            <circle cx="22" cy="46" r="5" class="ic-fill"/><circle cx="42" cy="46" r="5" class="ic-fill"/>
+            <path d="M26 10 v8 M38 10 v8" class="ic-stroke"/>
+          </svg>
+          <h3>Montera</h3>
+          <p>En liten låda per hörn fästs med magneter på boggiramen, och en målplåt på axelboxen. Inga hål, inga kablar.</p>
+        </article>
+        <article class="step tilt reveal" data-tilt>
+          <div class="step-num">2</div>
+          <svg viewBox="0 0 64 64" class="icon" aria-hidden="true">
+            <path d="M32 8 v30" class="ic-stroke"/><path d="M24 30 l8 8 8-8" class="ic-stroke"/>
+            <rect x="14" y="46" width="36" height="6" rx="2" class="ic-fill"/>
+            <path d="M18 20 q6 -6 0 -12 M46 20 q-6 -6 0 -12" class="ic-stroke thin"/>
+          </svg>
+          <h3>Mät</h3>
+          <p>Laser och ultraljud mäter hur fjädringen trycks ihop. Värdena vägs ihop och kontrolleras mot varandra.</p>
+        </article>
+        <article class="step tilt reveal" data-tilt>
+          <div class="step-num">3</div>
+          <svg viewBox="0 0 64 64" class="icon" aria-hidden="true">
+            <rect x="20" y="6" width="24" height="52" rx="5" class="ic-stroke"/>
+            <path d="M26 40 l6-10 5 6 5-12" class="ic-stroke thin"/>
+            <circle cx="32" cy="52" r="2" class="ic-fill"/>
+          </svg>
+          <h3>Se</h3>
+          <p>Vikt per hörn, total vikt och snedlastning visas i appen under lastningen. Larm om något ligger fel.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Funktioner -->
+    <section id="funktioner" class="section">
+      <div class="section-head reveal">
+        <p class="eyebrow">Funktioner</p>
+        <h2>Byggt för bangården, inte för labbet</h2>
+      </div>
+      <div class="features">
+        <article class="feature tilt reveal" data-tilt>
+          <h3><span class="dot d1"></span>Vikt och snedlast</h3>
+          <p>Totalvikt, vikt per hörn och snedlastning fram–bak, i sidled och diagonalt.</p>
+        </article>
+        <article class="feature tilt reveal" data-tilt>
+          <h3><span class="dot d2"></span>Automatisk nollställning</h3>
+          <p>När vagnen bekräftas tom justeras nollpunkten, med kontroll av att ingen givare har flyttat sig.</p>
+        </article>
+        <article class="feature tilt reveal" data-tilt>
+          <h3><span class="dot d3"></span>Uppkopplad</h3>
+          <p>LTE-M och GPS i gatewayen. Data når servern även utan wifi på terminalen.</p>
+        </article>
+        <article class="feature tilt reveal" data-tilt>
+          <h3><span class="dot d4"></span>Två givare per hörn</h3>
+          <p>Laser och ultraljud kontrollerar varandra. Om en givare störs av is eller smuts tar den andra över.</p>
+        </article>
+        <article class="feature tilt reveal" data-tilt>
+          <h3><span class="dot d5"></span>Byt hela lådan</h3>
+          <p>Ingen service på plats. En ny låda registreras med mobilen på under en minut.</p>
+        </article>
+        <article class="feature tilt reveal" data-tilt>
+          <h3><span class="dot d6"></span>Abonnemang</h3>
+          <p>Ingen investering. Betala per vagn och månad, hårdvara och byten ingår.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Appen -->
+    <section id="appen" class="section app-section">
+      <div class="app-copy reveal">
+        <p class="eyebrow">Appen</p>
+        <h2>Allt på en skärm</h2>
+        <p class="lead">Följ lastningen i realtid, bekräfta tom vagn och registrera nya lådor. Fungerar i mobilens webbläsare, utan installation.</p>
+        <a href="app.html" class="btn primary">Öppna appen</a>
+      </div>
+      <div class="phone reveal tilt" data-tilt aria-hidden="true">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <div class="p-top"><b>318045671234</b><span>1 s sedan</span></div>
+          <div class="p-total">76,2 t</div>
+          <div class="p-sub">Tomvikt 20,0 t · max 90,0 t</div>
+          <div class="p-grid">
+            <div><small>VR</small><b>18,9 t</b></div>
+            <div><small>HR</small><b>16,8 t</b></div>
+            <div><small>VL</small><b>21,2 t</b></div>
+            <div><small>HL</small><b>19,3 t</b></div>
+          </div>
+          <div class="p-bars">
+            <span>Fram – bak</span><i style="--w:18%"></i>
+            <span>Sida</span><i style="--w:22%"></i>
+            <span>Diagonalt</span><i style="--w:3%"></i>
+          </div>
+          <div class="p-btn">Bekräfta tom vagn</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pilot -->
+    <section id="pilot" class="section">
+      <div class="pilot tilt reveal" data-tilt>
+        <div>
+          <p class="eyebrow">Pilot</p>
+          <h2>Vill du testa på dina vagnar?</h2>
+          <p class="lead">Vi söker operatörer och vagnägare som vill vara med i en pilot med några vagnar. Vi monterar, du ser vikten i appen och jämför med spårvågen.</p>
+        </div>
+        <!-- Byt ut adressen mot en riktig kontaktadress innan sidan publiceras. -->
+        <a href="mailto:kontakt@example.com?subject=Pilot%20Vagnv%C3%A5g" class="btn primary big">Bli pilotkund</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© 2026 Vagnvåg</span>
+    <a href="#top">Till toppen ↑</a>
+  </footer>
+
+  <script src="landing.js"></script>
+</body>
+</html>
