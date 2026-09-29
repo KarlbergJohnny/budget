@@ -1,0 +1,7 @@
+{
+  "name": "vagn_common",
+  "version": "0.1.0",
+  "description": "Delat protokoll och mätbehandling för vagnvåg (hörnenhet och gateway)",
+  "frameworks": "*",
+  "platforms": "*"
+}

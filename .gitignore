@@ -1,0 +1,4 @@
+firmware/gateway/include/secrets.h
+.pio/
+__pycache__/
+*.db
